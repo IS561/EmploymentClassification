@@ -1,4 +1,4 @@
-# RATIONALE AND JUSTIFICATION
+## RATIONALE AND JUSTIFICATION
 ## Group 3: 
 - Jiang Chang
 - David Chanthabandith 
