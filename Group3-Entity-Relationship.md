@@ -1,11 +1,11 @@
 # Employment Classification
 ## Group 3: 
-## Jiang Chang
-## David Chanthabandith 
-## Sayantan Dutta
-## Pujeethaa Jakka
-## Yi (Joy) Liang 
-## Saxue Wang
+- Jiang Chang
+- David Chanthabandith 
+- Sayantan Dutta
+- Pujeethaa Jakka
+- Yi (Joy) Liang 
+- Saxue Wang
 
 ## Entity Classes
 - Employment Position
