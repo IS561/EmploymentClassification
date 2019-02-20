@@ -1,17 +1,24 @@
-**Entity Classes**
+# Entity Classes
 
-**1. Employment Position**
+**1. Employment Type**
 
 Class description:
-* A relationship between two parties. Usually based on a contract where work is paid for, where one party is the employer and the other is the employee.
-* Employment position refers to the type of employment.
-* In this case, we have 7 different employment types.
+* A classification of employment one falls under, based on HR policy, like a regular, temporary, intern, etc. 
+
+Attribute
+* Employment Type ID
+* Employment Type Name
+
+**2. Employment Position**
+
+Class description: 
+* This relates to the position the employee holds like for eg. Manager, Professor, Accountant etc.
 
 Attribute
 * Employment Position ID
-* Employment Position Name
+* Employment Position Name 
 
-**2. Appointment**
+**3. Appointment**
 
 Class description: 
 
@@ -24,14 +31,6 @@ Attributes:
 * Salary
 * TimeLength
 * TimeUnit (hours,months, years)
-
-**3. Employment Type**
-
-Description: 
-
-A classification of employment one falls under, based on HR policy, like regular, temporary, intern, etc. 
-
-Attributes: TypeID
 
 **4. Department**
 
@@ -61,9 +60,9 @@ Attribute
 
 **6. Time Employed**
 
-Description: 
+Class description
 
-Amount of time an employee has been employed by the university in the prior fiscal year. For example, John has been employed by the university in 9 months out of the prior fiscal year. 
+* Amount of time an employee has been employed by the university in the prior fiscal year. For example, John has been employed by the university in 9 months out of the prior fiscal year. 
 
 Attributes
 
@@ -72,19 +71,25 @@ Attributes
 
 **7. Student**
 
-Description: 
+Class description
 
-An individual who is taking classes and progressing towards a degree at the university. Attributes
+* An individual who is taking classes and progressing towards a degree at the university. 
+
+Attributes
+
 * Name
 * Age
+* University name 
 
 **8. Cooperative & Intern program**
 
-Description: 
+Class description
 
-An on job training program that must be fulfilled for successful completion of certain degrees. 
+* An on-job training program that must be fulfilled for successful completion of certain degrees. 
 
-Attributes: Program Name
+Attributes
+
+* Program Name
 
 **9. Policy**  
 
@@ -101,69 +106,172 @@ Attribute
 *  Working position
 *  Type of employment
 
-**Relationships**
+# Relationships
 
-**1. Adheres to**
+**1.Holds**
 
-Scope Note: Policy associated with an Employee helps determine employment type. Domain: Policy. Codomain: employee. Arity: 2. Cardinality: 1-to-many
+Scope Note: Participation of employees in different employment positions. 
 
-**2.Holds**
+Domain: Employee. 
 
-Scope Note: Participation of an employee in an employment position. Domain: Employee. Codomain: Employment Position. Arity:2. Cardinality: many-to-many
+Codomain: Employment Position. 
 
+Arity:2. 
 
-**3.Managed by**
+Cardinality: many-to-many
 
-Scope Note: to determine concurrent employment. Domain: Employee. Codomain: Department. Arity: 2. Cardinality: many to many
+**2.Managed by**
 
-**4.Has**
+Scope Note: To determine concurrent employment. 
 
-Scope Note: An employee has a type of employment at the university. Domain: Employee. Codomain: Employment Type. Arity: 2. Cardinality: many-to-1
+Domain: Employee. 
+
+Codomain: Department. 
+
+Arity: 2. 
+
+Cardinality: many to many
+
+**3.Has**
+
+Scope Note: An employee has a type of employment at the university. 
+
+Domain: Employee. 
+
+Codomain: Employment 
+
+Type. Arity: 2. 
+
+Cardinality: many-to-1
+
+Remarks:
 
 * Many employees can have one employment type
-* One employee can also only have one employment type
+* One employee can have only one employment type
 
-**5. Filled by**
+**4. Filled by**
 
-Scope Note: When an employment position has been assigned an appointment. Domain: Employment Position. Codomain: Appointment. Arity: 2. Cardinality: 1-to-many
+Scope Note: When an employment position has been assigned an appointment. 
 
-* A instance of position can have many appointments over time
+Domain: Employment Position. 
+
+Codomain: Appointment. 
+
+Arity: 2. 
+
+Cardinality: 1-to-many
+
+Remarks:
+
+* An instance of position can have many appointments over time
 * An instance of appointment can only be made to one position
 
-**6.Is replacing**
+**5. Is replacing**
 
-Scope Note: Whether an employee is replacing a regular employee on temporary leave. Domain: Employee. Codomain: Employee. Arity: 2. Cardinality: 1-to-1
+Scope Note: Whether an employee is replacing a regular employee on temporary leave. 
+
+Domain: Employee. 
+
+Codomain: Employee. 
+
+Arity: 2. 
+
+Cardinality: 1-to-1
+
+Remarks:
 
 * One employee is temporarily replacing another employee
 
-**7.Employed for in prior fiscal year**
+**6.Employed for in prior fiscal year**
 
-Scope Note: Amount of time an employee is employed by the university in prior fiscal year. Domain: Employee. Codomain: Time Employed. Arity: 2. Cardinality: many-to-1
+Scope Note: Amount of time an employee is employed by the university in the prior fiscal year. 
+
+Domain: Employee. 
+
+Codomain: Time Employed. 
+
+Arity: 2. 
+
+Cardinality: many-to-1
+
+Remarks:
 
 * Many employees can be employed for the same amount of time
 * One employee can only be employed for one amount of time
 
-**8.Be also**
+**7.Is also**
 
-Scope Note: When an employee is also a student at the university. Domain: Employee. Codomain: Student. Arity: 2. Cardinality: 1-to-1
+Scope Note: When an employee is also a student at the university. 
+
+Domain: Employee. 
+
+Codomain: Student. 
+
+Arity: 2. 
+
+Cardinality: 1-to-1
+
+Remarks:
 
 * An employee can be a student
 * A student can be an employee
 
-**9.Is a part of**
+**8. Is a part of**
 
-Scope Note: Student is a part of a program that would make him/her a co-op student. Domain: Student. Codomain: Cooperative Program. Arity: 2. Cardinality: many-to-1
+Scope Note: Student is a part of a program that would make him/her a co-op or an intern student. 
+
+Domain: Student. 
+
+Codomain: Cooperative & Intern program. 
+
+Arity: 2. 
+
+Cardinality: many-to-1
+
+Remarks:
 
 * Many employees can be part of a co-op program
 * An employee can only belong to one co-op program
 
-**10. Impacts**
+**9. Impacts**
 
-Scope Note: The duration of Appointment changed impacts employment type.  Domain: Appoitment. Codomain: Employment Type. Arity: 2. Cardinality: many-to-1
+Scope Note: The duration of Appointment changed impacts employment type.  
+
+Domain: Appointment. 
+
+Codomain: Employment Type. 
+
+Arity: 2. 
+
+Cardinality: many-to-1
+
+Remarks:
 
 * An appointment can belong to one employment type
 * An employment type can have many appointments 
 
-**11. Determines**
+**10. Determines**
 
-Scope Note: If a student is a Harvard student, then his/her employment type is student employment. Domain: Student. Codomain: Employment type. Arity:2. Cardinality: 1-to-many
+Scope Note: If a student is a Harvard student, then his/her employment type is student employment. 
+
+Domain: Student. 
+
+Codomain: Employment type. 
+
+Arity:2. 
+
+Cardinality: 1-to-many
+
+**11. Adheres to**
+
+Scope Note: Policy associated with an Employee. 
+
+Domain: Employee. 
+
+Codomain: Policy. 
+
+Arity: 2. 
+
+Cardinality: many-to-1
+
+Remarks: Many employees adhere to one policy.
