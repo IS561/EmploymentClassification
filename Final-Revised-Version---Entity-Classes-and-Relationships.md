@@ -110,168 +110,110 @@ Attribute
 
 **1.Holds**
 
-Scope Note: Participation of employees in different employment positions. 
-
-Domain: Employee. 
-
-Codomain: Employment Position. 
-
-Arity:2. 
-
-Cardinality: many-to-many
+* Scope Note: Participation of employees in different employment positions. 
+* Domain: Employee. 
+* Codomain: Employment Position. 
+* Arity:2. 
+* Cardinality: many-to-many
 
 **2.Managed by**
 
-Scope Note: To determine concurrent employment. 
-
-Domain: Employee. 
-
-Codomain: Department. 
-
-Arity: 2. 
-
-Cardinality: many to many
+* Scope Note: To determine concurrent employment. 
+* Domain: Employee. 
+* Codomain: Department. 
+* Arity: 2. 
+* Cardinality: many to many
 
 **3.Has**
 
-Scope Note: An employee has a type of employment at the university. 
-
-Domain: Employee. 
-
-Codomain: Employment 
-
-Type. Arity: 2. 
-
-Cardinality: many-to-1
-
-Remarks:
-
-* Many employees can have one employment type
-* One employee can have only one employment type
+* Scope Note: An employee has a type of employment at the university. 
+* Domain: Employee. 
+* Codomain: Employment Type. 
+* Arity: 2. 
+* Cardinality: many-to-1
+* Remarks:
+    - Many employees can have one employment type
+    - One employee can have only one employment type
 
 **4. Filled by**
 
-Scope Note: When an employment position has been assigned an appointment. 
-
-Domain: Employment Position. 
-
-Codomain: Appointment. 
-
-Arity: 2. 
-
-Cardinality: 1-to-many
-
-Remarks:
-
-* An instance of position can have many appointments over time
-* An instance of appointment can only be made to one position
+* Scope Note: When an employment position has been assigned an appointment. 
+* Domain: Employment Position. 
+* Codomain: Appointment. 
+* Arity: 2. 
+* Cardinality: 1-to-many
+* Remarks:
+   - An instance of a position can have many appointments over time
+   - An instance of appointment can only be made to one position
 
 **5. Is replacing**
 
-Scope Note: Whether an employee is replacing a regular employee on temporary leave. 
-
-Domain: Employee. 
-
-Codomain: Employee. 
-
-Arity: 2. 
-
-Cardinality: 1-to-1
-
-Remarks:
-
-* One employee is temporarily replacing another employee
+* Scope Note: Whether an employee is replacing a regular employee on temporary leave. 
+* Domain: Employee. 
+* Codomain: Employee. 
+* Arity: 2. 
+* Cardinality: 1-to-1
+* Remarks:
+    - One employee is temporarily replacing another employee
 
 **6.Employed for in prior fiscal year**
 
-Scope Note: Amount of time an employee is employed by the university in the prior fiscal year. 
-
-Domain: Employee. 
-
-Codomain: Time Employed. 
-
-Arity: 2. 
-
-Cardinality: many-to-1
-
-Remarks:
-
-* Many employees can be employed for the same amount of time
-* One employee can only be employed for one amount of time
+* Scope Note: Amount of time an employee is employed by the university in the prior fiscal year. 
+* Domain: Employee. 
+* Codomain: Time Employed. 
+* Arity: 2. 
+* Cardinality: many-to-1
+* Remarks:
+    - Many employees can be employed for the same amount of time
+    - One employee can only be employed for one amount of time
 
 **7.Is also**
 
-Scope Note: When an employee is also a student at the university. 
-
-Domain: Employee. 
-
-Codomain: Student. 
-
-Arity: 2. 
-
-Cardinality: 1-to-1
-
-Remarks:
-
-* An employee can be a student
-* A student can be an employee
+* Scope Note: When an employee is also a student at the university. 
+* Domain: Employee. 
+* Codomain: Student. 
+* Arity: 2. 
+* Cardinality: 1-to-1
+* Remarks:
+    - An employee can be a student
+    - A student can be an employee
 
 **8. Is a part of**
 
-Scope Note: Student is a part of a program that would make him/her a co-op or an intern student. 
-
-Domain: Student. 
-
-Codomain: Cooperative & Intern program. 
-
-Arity: 2. 
-
-Cardinality: many-to-1
-
-Remarks:
-
-* Many employees can be part of a co-op program
-* An employee can only belong to one co-op program
+* Scope Note: Student is a part of a program that would make him/her a co-op or an intern student. 
+* Domain: Student. 
+* Codomain: Cooperative & Intern program. 
+* Arity: 2. 
+* Cardinality: many-to-1
+* Remarks:
+     - Many employees can be part of a co-op program
+     - An employee can only belong to one co-op program
 
 **9. Impacts**
 
-Scope Note: The duration of Appointment changed impacts employment type.  
-
-Domain: Appointment. 
-
-Codomain: Employment Type. 
-
-Arity: 2. 
-
-Cardinality: many-to-1
-
-Remarks:
-
-* An appointment can belong to one employment type
-* An employment type can have many appointments 
+* Scope Note: The duration of Appointment changed impacts employment type.  
+* Domain: Appointment. 
+* Codomain: Employment Type. 
+* Arity: 2. 
+* Cardinality: many-to-1
+* Remarks:
+    - An appointment can belong to one employment type
+    - An employment type can have many appointments 
 
 **10. Determines**
 
-Scope Note: If a student is a Harvard student, then his/her employment type is student employment. 
-
-Domain: Student. 
-
-Codomain: Employment type. 
-
-Arity:2. 
-
-Cardinality: 1-to-many
+* Scope Note: If a student is a Harvard student, then his/her employment type is student employment. 
+* Domain: Student. 
+* Codomain: Employment type. 
+* Arity:2. 
+* Cardinality: 1-to-many
 
 **11. Adheres to**
 
-Scope Note: Policy associated with an Employee. 
-
-Domain: Employee. 
-
-Codomain: Policy. 
-
-Arity: 2. 
-
-Cardinality: many-to-1
-
-Remarks: Many employees adhere to one policy.
+* Scope Note: Policy associated with an Employee. 
+* Domain: Employee. 
+* Codomain: Policy. 
+* Arity: 2. 
+* Cardinality: many-to-1
+* Remarks: 
+   - Many employees adhere to one policy.
