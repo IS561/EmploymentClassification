@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
-<svg width="52cm" height="23cm" viewBox="58 -3 1035 449" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="52cm" height="26cm" viewBox="58 -3 1035 510" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <g>
     <rect style="fill: #ffffff" x="505" y="123" width="91.55" height="28"/>
     <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="505" y="123" width="91.55" height="28"/>
@@ -59,20 +59,20 @@
     <text font-size="12.7998" style="fill: #000000;text-anchor:end;font-family:monospace;font-style:normal;font-weight:normal" x="836" y="136">N</text>
   </g>
   <g>
-    <rect style="fill: #ffffff" x="975" y="401" width="96.1" height="28"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="975" y="401" width="96.1" height="28"/>
-    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1023.05" y="421">Supervisor</text>
-    <rect style="fill: #ffffff" x="975" y="429" width="96.1" height="8"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="975" y="429" width="96.1" height="8"/>
-    <rect style="fill: #ffffff" x="975" y="437" width="96.1" height="8"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="975" y="437" width="96.1" height="8"/>
+    <rect style="fill: #ffffff" x="974" y="463" width="96.1" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="974" y="463" width="96.1" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1022.05" y="483">Supervisor</text>
+    <rect style="fill: #ffffff" x="974" y="491" width="96.1" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="974" y="491" width="96.1" height="8"/>
+    <rect style="fill: #ffffff" x="974" y="499" width="96.1" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="974" y="499" width="96.1" height="8"/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="986.15,170 1022,170 1022,335 1023.05,335 1023.05,401 "/>
-    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="1022.53" y="331">approved by</text>
-    <polygon style="fill: #000000" points="1066.88,331 1066.88,323 1074.88,327 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="986.15,170 1022,170 1022,335 1022.05,335 1022.05,463 "/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="1022.03" y="331">approved by</text>
+    <polygon style="fill: #000000" points="1066.38,331 1066.38,323 1074.38,327 "/>
     <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="990.15" y="166">N</text>
-    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1027.05" y="397">N</text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1026.05" y="459">N</text>
   </g>
   <g>
     <rect style="fill: #ffffff" x="648" y="401" width="132.5" height="28"/>
@@ -210,10 +210,17 @@
     <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="920" y="120">N</text>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="505,137 484,137 484,14 1092.1,14 1092.1,415 1071.1,415 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="505,137 484,137 484,14 1092.1,14 1092.1,477 1070.1,477 "/>
     <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="788.05" y="10">employs</text>
     <polygon style="fill: #000000" points="817,10 817,2 825,6 "/>
     <text font-size="12.7998" style="fill: #000000;text-anchor:end;font-family:monospace;font-style:normal;font-weight:normal" x="501" y="133">1</text>
-    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1075.1" y="411">N</text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1074.1" y="473">N</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="758.1,271 791,271 791,477 974,477 "/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="793" y="370">supervised by</text>
+    <polygon style="fill: #000000" points="895.1,370 895.1,362 903.1,366 "/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="762.1" y="267">N</text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:end;font-family:monospace;font-style:normal;font-weight:normal" x="970" y="473">1</text>
   </g>
 </svg>

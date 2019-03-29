@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
-<svg width="56cm" height="25cm" viewBox="3 24 1114 496" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="54cm" height="24cm" viewBox="56 -49 1061 472" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <g>
     <ellipse style="fill: #ffffff" cx="680" cy="264" rx="20" ry="20"/>
     <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="680" cy="264" rx="20" ry="20"/>
@@ -212,15 +212,20 @@
   <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="397.876" y="302">
     <tspan x="397.876" y="302">:employeeA'sMVRreleaseForm</tspan>
   </text>
-  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="59" y="135">
-    <tspan x="59" y="135"></tspan>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 960.754,285.507 A 231.392,231.392 0 0 0 699,258"/>
+    <polygon style="fill: #000000" points="966.366,290.473 955.647,287.297 960.888,285.351 962.476,279.992 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="966.366,290.473 955.647,287.297 960.888,285.351 962.476,279.992 "/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="841" y="276">
+    <tspan x="841" y="276">mp:supervisedby</tspan>
   </text>
   <g>
-    <rect style="fill: #ffffff" x="4.29" y="432" width="482.45" height="87"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x="4.29" y="432" width="482.45" height="87"/>
-    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="245.515" y="472.3">
-      <tspan x="245.515" y="472.3">Employee A has filled out mvr3 (an MVR) and is the driver for Business Activity 1.</tspan>
-      <tspan x="245.515" y="488.3"> That activity has been approved by Supervisor B, who supervises Employee A. </tspan>
-    </text>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 1009.05,275.249 A 200.382,200.382 0 1 0 653,119"/>
+    <polygon style="fill: #000000" points="1004.36,281.097 1007.06,270.246 1009.23,275.394 1014.66,276.74 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1004.36,281.097 1007.06,270.246 1009.23,275.394 1014.66,276.74 "/>
   </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="827" y="-24">
+    <tspan x="827" y="-24">mp:employs</tspan>
+  </text>
 </svg>
