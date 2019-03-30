@@ -1,0 +1,261 @@
+
+DES> /consult C:\Users\abhis\Desktop\eclinxi.dl
+
+Info: 20 rules consulted.
+Info: Processing file 'C:\Users\abhis\Desktop\eclinxi.dl' ...
+
+DES> % Employeement Classification (ec)
+
+
+DES> 
+
+
+DES> includes(ec, employee).
+
+{
+  includes(ec,employee)
+}
+Info: 1 tuple computed.          
+
+DES> isalso(employee, student).
+
+{
+  isalso(employee,student)
+}
+Info: 1 tuple computed.          
+
+DES> hasworkinghours(student,18).
+
+{
+  hasworkinghours(student,18)
+}
+Info: 1 tuple computed.          
+
+DES> hasworkinghours(employee,18).
+
+{
+  hasworkinghours(employee,18)
+}
+Info: 1 tuple computed.          
+
+DES> isin(student,summer).
+
+{
+  isin(student,summer)
+}
+Info: 1 tuple computed.          
+
+DES> isclassifiedas(student,ptse).
+
+{
+  isclassifiedas(student,ptse)
+}
+Info: 1 tuple computed.          
+
+DES> isclassifiedas(student,nptse).
+
+{
+  isclassifiedas(student,nptse)
+}
+Info: 1 tuple computed.          
+
+DES> isclassifiedas(employee,ptnse).
+
+{
+  isclassifiedas(employee,ptnse)
+}
+Info: 1 tuple computed.          
+
+DES> isclassifiedas(employee,nptnse).
+
+{
+  isclassifiedas(employee,nptnse)
+}
+Info: 1 tuple computed.          
+
+DES> 
+
+
+DES> % Inverse, domain and codomain for 'isclassifiedas'
+
+
+DES> belongto(ptnse,employee) :- isclassifiedas(employee, ptnse).
+
+Info: Processing:
+  belongto(ptnse,employee) :-
+    isclassifiedas(employee,ptnse).
+{
+  belongto(nptnse,employee),
+  belongto(nptse,student),
+  belongto(ptnse,employee),
+  belongto(ptse,student)
+}
+Info: 4 tuples computed.          
+
+DES> belongto(nptnse,employee) :- isclassifiedas(employee, nptnse).
+
+Info: Processing:
+  belongto(nptnse,employee) :-
+    isclassifiedas(employee,nptnse).
+{
+  belongto(nptnse,employee),
+  belongto(nptse,student),
+  belongto(ptnse,employee),
+  belongto(ptse,student)
+}
+Info: 4 tuples computed.          
+
+DES> belongto(ptse,student) :- isclassifiedas(student, ptse).
+
+Info: Processing:
+  belongto(ptse,student) :-
+    isclassifiedas(student,ptse).
+{
+  belongto(nptnse,employee),
+  belongto(nptse,student),
+  belongto(ptnse,employee),
+  belongto(ptse,student)
+}
+Info: 4 tuples computed.          
+
+DES> belongto(nptse,student) :- isclassifiedas(student, nptse).
+
+Info: Processing:
+  belongto(nptse,student) :-
+    isclassifiedas(student,nptse).
+{
+  belongto(nptnse,employee),
+  belongto(nptse,student),
+  belongto(ptnse,employee),
+  belongto(ptse,student)
+}
+Info: 4 tuples computed.          
+
+DES> 
+
+
+DES> 
+
+
+DES> % student who is in academic year is part time student employee; who is in summer and works no more than 30 hours per week is part time, otherwise is not part time
+
+
+DES> 
+
+
+DES> se(employee, student, term, H) :- isalso(employee, student), isin(student, summer), hasworkinghours(student,H), H>30, isclassifiedas(student, nptse).
+
+Info: Processing:
+  se(employee,student,term,H) :-
+    isalso(employee,student),
+    isin(student,summer),
+    hasworkinghours(student,H),
+    H>30,
+    isclassifiedas(student,nptse).
+{
+  se(employee,student,term,18)
+}
+Info: 1 tuple computed.          
+
+DES> 
+
+
+DES> se(employee, student,term, H) :- isalso(employee, student), isin(student,summer), hasworkinghours(student,H), isclassifiedas(student,ptse), H=<30.
+
+Info: Processing:
+  se(employee,student,term,H) :-
+    isalso(employee,student),
+    isin(student,summer),
+    hasworkinghours(student,H),
+    isclassifiedas(student,ptse),
+    H=<30.
+{
+  se(employee,student,term,18)
+}
+Info: 1 tuple computed.          
+
+DES> 
+
+
+DES> se(employee,student,term, H) :- isalso(employee, student), isin(student,academicyear), hasworkinghours(student,H), isclassifiedas(student,ptse), H=<30.
+
+Info: Processing:
+  se(employee,student,term,H) :-
+    isalso(employee,student),
+    isin(student,academicyear),
+    hasworkinghours(student,H),
+    isclassifiedas(student,ptse),
+    H=<30.
+{
+  se(employee,student,term,18)
+}
+Info: 1 tuple computed.          
+
+DES> 
+
+
+DES> se(employee, student, term, H) :- hasworkinghours(employee, H), isclassifiedas(employee,ptnse), H=<30.
+
+Info: Processing:
+  se(employee,student,term,H) :-
+    hasworkinghours(employee,H),
+    isclassifiedas(employee,ptnse),
+    H=<30.
+{
+  se(employee,student,term,18)
+}
+Info: 1 tuple computed.          
+
+DES> 
+
+
+DES> se(employee, student, term, H) :- hasworkinghours(employee, H), isclassifiedas(employee,nptnse), H>30.
+
+Info: Processing:
+  se(employee,student,term,H) :-
+    hasworkinghours(employee,H),
+    isclassifiedas(employee,nptnse),
+    H>30.
+{
+  se(employee,student,term,18)
+}
+Info: 1 tuple computed.          
+
+DES> se(employee, student, term, H) :- hasworkinghours(employee, H), isclassifiedas(employee,ptnse), H=<30.
+
+Info: Processing:
+  se(employee,student,term,H) :-
+    hasworkinghours(employee,H),
+    isclassifiedas(employee,ptnse),
+    H=<30.
+{
+  se(employee,student,term,18)
+}
+Info: 1 tuple computed.          
+
+DES> se(employee, student, term, H) :- hasworkinghours(employee, H), isclassifiedas(employee,nptnse), H>30.
+
+Info: Processing:
+  se(employee,student,term,H) :-
+    hasworkinghours(employee,H),
+    isclassifiedas(employee,nptnse),
+    H>30.
+{
+  se(employee,student,term,18)
+}
+Info: 1 tuple computed.          
+
+DES> 
+
+
+Info: Batch file processed.
+
+
+DES> se(employee, student, term, H) 
+
+{
+  se(employee,student,term,18)
+}
+Info: 1 tuple computed.          
+
+DES> 

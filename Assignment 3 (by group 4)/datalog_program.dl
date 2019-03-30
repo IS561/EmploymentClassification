@@ -1,0 +1,32 @@
+% Employeement Classification (ec)
+
+includes(ec, employee).
+isalso(employee, student).
+hasworkinghours(student,18).
+hasworkinghours(employee,18).
+isin(student,summer).
+isclassifiedas(student,ptse).
+isclassifiedas(student,nptse).
+isclassifiedas(employee,ptnse).
+isclassifiedas(employee,nptnse).
+
+% Inverse, domain and codomain for 'isclassifiedas'
+belongto(ptnse,employee) :- isclassifiedas(employee, ptnse).
+belongto(nptnse,employee) :- isclassifiedas(employee, nptnse).
+belongto(ptse,student) :- isclassifiedas(student, ptse).
+belongto(nptse,student) :- isclassifiedas(student, nptse).
+
+
+% student who is in academic year is part time student employee; who is in summer and works no more than 30 hours per week is part time, otherwise is not part time
+
+se(employee, student, term, H) :- isalso(employee, student), isin(student, summer), hasworkinghours(student,H), H>30, isclassifiedas(student, nptse).
+
+se(employee, student,term, H) :- isalso(employee, student), isin(student,summer), hasworkinghours(student,H), isclassifiedas(student,ptse), H=<30.%
+
+se(employee,student,term, H) :- isalso(employee, student), isin(student,academicyear), hasworkinghours(student,H), isclassifiedas(student,ptse), H=<30.
+
+se(employee, student, term, H) :- hasworkinghours(employee, H), isclassifiedas(employee,ptnse), H=<30.
+
+se(employee, student, term, H) :- hasworkinghours(employee, H), isclassifiedas(employee,nptnse), H>30.
+se(employee, student, term, H) :- hasworkinghours(employee, H), isclassifiedas(employee,ptnse), H=<30.
+se(employee, student, term, H) :- hasworkinghours(employee, H), isclassifiedas(employee,nptnse), H>30.
