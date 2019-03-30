@@ -17,16 +17,15 @@ belongto(ptse,student) :- isclassifiedas(student, ptse).
 belongto(nptse,student) :- isclassifiedas(student, nptse).
 
 
-% student who is in academic year is part time student employee; who is in summer and works no more than 30 hours per week is part time, otherwise is not part time
-
+% if a student is in summer term and works more than 30 hours, he is a non-part time student employee.
 se(employee, student, term, H) :- isalso(employee, student), isin(student, summer), hasworkinghours(student,H), H>30, isclassifiedas(student, nptse).
-
-se(employee, student,term, H) :- isalso(employee, student), isin(student,summer), hasworkinghours(student,H), isclassifiedas(student,ptse), H=<30.%
-
+% if a student if in summer and works no more than 30 hours, he is a part time student employee
+se(employee, student,term, H) :- isalso(employee, student), isin(student,summer), hasworkinghours(student,H), isclassifiedas(student,ptse), H=<30.
+% if a student is in academic year, he will be a part time student
 se(employee,student,term, H) :- isalso(employee, student), isin(student,academicyear), hasworkinghours(student,H), isclassifiedas(student,ptse), H=<30.
-
+% if a employee not registered as a student and work no more than 30 hours, he is a part time non-student employee
 se(employee, student, term, H) :- hasworkinghours(employee, H), isclassifiedas(employee,ptnse), H=<30.
-
+% if a employee not registered as a student and work more than 30 hours, he is a non-part time non-student employee
 se(employee, student, term, H) :- hasworkinghours(employee, H), isclassifiedas(employee,nptnse), H>30.
 se(employee, student, term, H) :- hasworkinghours(employee, H), isclassifiedas(employee,ptnse), H=<30.
 se(employee, student, term, H) :- hasworkinghours(employee, H), isclassifiedas(employee,nptnse), H>30.
