@@ -1,0 +1,303 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://is561.org/MotorPool"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://is561.org/MotorPool">
+    <Prefix name="" IRI="http://is561.org/MotorPool#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="tl" IRI="http://purl.org/NET/c4dm/timeline.owl#"/>
+    <Prefix name="dbp" IRI="http://dbpedia.org/resource/"/>
+    <Prefix name="geo" IRI="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
+    <Prefix name="org" IRI="http://www.w3.org/ns/org#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="xsp" IRI="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"/>
+    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
+    <Prefix name="prov" IRI="http://www.w3.org/ns/prov#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
+    <Prefix name="swrl" IRI="http://www.w3.org/2003/11/swrl#"/>
+    <Prefix name="wped" IRI="http://en.wikipedia.org/wiki/"/>
+    <Prefix name="dolce" IRI="http://ontology.ip.rm.cnr.it/ontologies/DOLCE-Lite#"/>
+    <Prefix name="event" IRI="http://purl.org/NET/c4dm/event.owl#"/>
+    <Prefix name="swrlb" IRI="http://www.w3.org/2003/11/swrlb#"/>
+    <Prefix name="dcterms" IRI="http://purl.org/dc/terms/"/>
+    <Prefix name="protege" IRI="http://protege.stanford.edu/plugins/owl/protege#"/>
+    <Declaration>
+        <Class IRI="#ACCIDENT"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BUSINESS_ACTIVITY"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DRIVER"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EMPLOYEE"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#INSURANCE_POLICY"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#INSURED_ACTIVITY"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MVR_RELEASE_FORM"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SUPERVISOR"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VEHICLE"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#approvedby"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#approves"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#designateddriver"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#documentedby"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#documents"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#drivenby"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#driverfor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#drives"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#droveinaccident"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#filledby"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#fillout"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hastraveler"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#included"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#insuredfor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#insuredon"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#involvesdriver"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#involvesvehicle"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#occurredduring"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#reportedby"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#reports"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#supervise"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#supervisedby"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#travelson"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#usedinactivity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#usesvehicle"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#vehicleinaccident"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#accident1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#accidentreport1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#bizactivity1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#employeeA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#mvrrelease1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#supervisorB"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#vehicle1"/>
+    </Declaration>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#occurredduring"/>
+        <NamedIndividual IRI="#accident1"/>
+        <NamedIndividual IRI="#bizactivity1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#documents"/>
+        <NamedIndividual IRI="#accidentreport1"/>
+        <NamedIndividual IRI="#accident1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#approvedby"/>
+        <NamedIndividual IRI="#bizactivity1"/>
+        <NamedIndividual IRI="#supervisorB"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#usesvehicle"/>
+        <NamedIndividual IRI="#bizactivity1"/>
+        <NamedIndividual IRI="#vehicle1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#fillout"/>
+        <NamedIndividual IRI="#employeeA"/>
+        <NamedIndividual IRI="#mvrrelease1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#supervisedby"/>
+        <NamedIndividual IRI="#employeeA"/>
+        <NamedIndividual IRI="#supervisorB"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#travelson"/>
+        <NamedIndividual IRI="#employeeA"/>
+        <NamedIndividual IRI="#bizactivity1"/>
+    </ObjectPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#approvedby"/>
+        <ObjectProperty IRI="#approves"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#designateddriver"/>
+        <ObjectProperty IRI="#driverfor"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#documentedby"/>
+        <ObjectProperty IRI="#documents"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#drivenby"/>
+        <ObjectProperty IRI="#drives"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#droveinaccident"/>
+        <ObjectProperty IRI="#involvesdriver"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#filledby"/>
+        <ObjectProperty IRI="#fillout"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hastraveler"/>
+        <ObjectProperty IRI="#travelson"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#included"/>
+        <ObjectProperty IRI="#occurredduring"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#insuredfor"/>
+        <ObjectProperty IRI="#insuredon"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#involvesvehicle"/>
+        <ObjectProperty IRI="#vehicleinaccident"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#reportedby"/>
+        <ObjectProperty IRI="#reports"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#supervise"/>
+        <ObjectProperty IRI="#supervisedby"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#usedinactivity"/>
+        <ObjectProperty IRI="#usesvehicle"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#approvedby"/>
+        <Class IRI="#BUSINESS_ACTIVITY"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#approves"/>
+        <Class IRI="#SUPERVISOR"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#fillout"/>
+        <Class IRI="#EMPLOYEE"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#supervise"/>
+        <Class IRI="#SUPERVISOR"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#travelson"/>
+        <Class IRI="#EMPLOYEE"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#approvedby"/>
+        <Class IRI="#SUPERVISOR"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#approves"/>
+        <Class IRI="#BUSINESS_ACTIVITY"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#fillout"/>
+        <Class IRI="#MVR_RELEASE_FORM"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#supervise"/>
+        <Class IRI="#EMPLOYEE"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#travelson"/>
+        <Class IRI="#BUSINESS_ACTIVITY"/>
+    </ObjectPropertyRange>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#approvedby"/>
+            <ObjectProperty IRI="#supervise"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#insuredfor"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#hastraveler"/>
+            <ObjectProperty IRI="#fillout"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#insuredon"/>
+    </SubObjectPropertyOf>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
